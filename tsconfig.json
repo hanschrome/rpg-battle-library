@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-mat-rpg-battle": [
+        "dist/ngx-mat-rpg-battle"
+      ],
+      "ngx-mat-rpg-battle/*": [
+        "dist/ngx-mat-rpg-battle/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "NgxMatRpgBattle": {
+      "projectType": "library",
+      "root": "projects/ngx-mat-rpg-battle",
+      "sourceRoot": "projects/ngx-mat-rpg-battle/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-mat-rpg-battle/tsconfig.lib.json",
+            "project": "projects/ngx-mat-rpg-battle/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-mat-rpg-battle/src/test.ts",
+            "tsConfig": "projects/ngx-mat-rpg-battle/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-mat-rpg-battle/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-mat-rpg-battle/tsconfig.lib.json",
+              "projects/ngx-mat-rpg-battle/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "rpg-battle-library"
 }
